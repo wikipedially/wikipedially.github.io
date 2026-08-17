@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>wikipedially</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wikipedially</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header class="page-header">
+    <header
+      class="page-header"
+      tabindex="0"
+      role="button"
+      aria-label="Open profile"
+    >
       <h1>wikipedially</h1>
       <p>snano zekaban fu unja zelehti.</p>
     </header>
+
+    <div class="profile-overlay" id="profileModal" aria-hidden="true">
+      <div class="profile-card">
+        <div class="profile-banner"></div>
+        <div class="profile-avatar-container">
+          <img src="/avatar.jpg" alt="Profile Avatar" class="profile-avatar"/>
+        </div>
+        <button class="profile-close" id="profileClose" aria-label="Close profile">&times;</button>
+        <div class="profile-body">
+          <h2 class="profile-name">wikipedially</h2>
+          <p class="profile-handle">
+            <i class="fa-brands fa-discord"></i>.wiki._
+          </p>
+          <div class="profile-divider"></div>
+          <div class="profile-section">
+            <h3>interests</h3>
+            <p>viossa • word games • frontend developing • logic puzzles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main class="container">
       <p class="intro">
-        Hi! This is where I'll be storing all of my projects on GitHub for ease of
-        access.
+        Hi! This is where I'll be storing all of my projects on GitHub for ease
+        of access.
       </p>
       <div class="project-list">
-        <a href="/wikikoli/" class="glass-card">
+        <a href="/wikikoli/" class="glass-card" mahaklar="This is my personally curated dictionary for words I've come across in Viossa.">
           <div class="project-title">
-            📚 <span class="title-text">Wikikoli</span>
+            📚 <span class="title-text wipTag">Wikikoli</span>
           </div>
-          <span class="subtext" mahaklar="This is my personally curated dictionary for words I've come across in Viossa.">Afto mahajena kotoba libr fu un. Sor har al ko ke lera'n na Vjosa, mit imi aw riso!</span>
+          <span class="subtext"
+            >Afto mahajena kotoba libr fu un. Sor har al ko ke lera'n na Vjosa,
+            mit imi aw riso!</span
+          >
+        </a>
+        <a href="/word-bomb/" class="glass-card">
+          <div class="project-title">
+            💥 <span class="title-text activeTag">Word Bomb Lookup</span>
+          </div>
+          <span class="subtext"
+            >A tool to look up prompts and words from the Roblox game
+            <i>Word Bomb</i>.</span
+          >
         </a>
         <div class="glass-card">
           <div class="project-title">
